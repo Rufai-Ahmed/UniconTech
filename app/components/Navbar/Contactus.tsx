@@ -65,7 +65,7 @@ const Contactusform: React.FC<ContactusformProps> = ({
                       href="/"
                       className="text-2xl sm:text-4xl font-semibold text-black"
                     >
-                      Desgy Solutions
+                      Unicon Tech
                     </Link>
                   </div>
                   <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
