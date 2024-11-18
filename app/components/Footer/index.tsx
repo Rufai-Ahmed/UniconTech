@@ -14,21 +14,6 @@ const products: ProductType[] = [
     section: "Menu",
     link: ["Home", "Popular", "About", "Contact"],
   },
-  {
-    id: 2,
-    section: "Category",
-    link: ["Design", "Mockup", "View all", "Log In"],
-  },
-  {
-    id: 3,
-    section: "Pages",
-    link: ["404", "Instructions", "License"],
-  },
-  {
-    id: 4,
-    section: "Others",
-    link: ["Styleguide", "Changelog"],
-  },
 ];
 
 const footer = () => {

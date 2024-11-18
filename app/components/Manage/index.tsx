@@ -4,6 +4,22 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import Image from "next/image";
 
+interface ComplexityPricing {
+  basic: number;
+  standard: number;
+  premium: number;
+}
+
+interface Plan {
+  heading: string;
+  basePrice: number;
+  complexityPricing: ComplexityPricing;
+  user: string;
+  button: string;
+  features: string[];
+  category: string;
+}
+
 const formatPrice = (price: number) => {
   if (price >= 1000000) {
     return `₦${(price / 1000000).toFixed(1)}m`;
@@ -17,7 +33,8 @@ const formatPrice = (price: number) => {
 const plans = [
   {
     heading: "Website Creation",
-    price: 250000,
+    basePrice: 250000,
+    complexityPricing: { basic: 250000, standard: 500000, premium: 1000000 },
     user: "one-time fee",
     button: "Get Started Now",
     features: [
@@ -31,7 +48,8 @@ const plans = [
   },
   {
     heading: "Mobile Application Development",
-    price: 1500000,
+    basePrice: 1500000,
+    complexityPricing: { basic: 1500000, standard: 3000000, premium: 5000000 },
     user: "one-time fee",
     button: "Start My Project",
     features: [
@@ -45,7 +63,8 @@ const plans = [
   },
   {
     heading: "UI/UX Design",
-    price: 199000,
+    basePrice: 199000,
+    complexityPricing: { basic: 199000, standard: 350000, premium: 500000 },
     user: "per project",
     button: "Get Your Design",
     features: [
@@ -188,6 +207,9 @@ const plans = [
 const Manage = () => {
   const [enabled, setEnabled] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("Build/Desing");
+  const [selectedComplexity, setSelectedComplexity] = useState<
+    "basic" | "standard" | "premium"
+  >("basic");
 
   const toggleEnabled = () => {
     setEnabled(!enabled);
@@ -205,12 +227,33 @@ const Manage = () => {
     window.open(`https://wa.me/2349110212491?text=${message}`, "_blank");
   };
 
+  const getComplexityPrice = (plan: Plan) => {
+    return formatPrice(plan.complexityPricing[selectedComplexity]);
+  };
+
   return (
     <div id="services-section">
       <div className="mx-auto max-w-7xl sm:py-20 lg:px-8 my-16">
         <h3 className="text-center text-4xl sm:text-65xl font-black">
           Manage Your Digital Solutions <br /> All in One Place.
         </h3>
+
+        <div className="flex justify-center mt-8">
+          <label className="mr-3 font-semibold text-lg">Complexity:</label>
+          <select
+            value={selectedComplexity}
+            onChange={(e) =>
+              setSelectedComplexity(
+                e.target.value as "basic" | "standard" | "premium"
+              )
+            }
+            className="border border-gray-300 rounded-md px-3 py-1"
+          >
+            <option value="basic">Basic</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+          </select>
+        </div>
 
         <div className="md:flex md:justify-around mt-20">
           <div className="flex gap-5 justify-center md:justify-start">
@@ -278,8 +321,11 @@ const Manage = () => {
             <div className="manageTabs text-center p-10" key={i}>
               <h4 className="text-2xl font-bold mb-3">{plan.heading}</h4>
               <h2 className="text-5xl sm:text-65xl font-extrabold mb-3">
-                {formatPrice(plan.price)}
+                {plan.complexityPricing
+                  ? getComplexityPrice(plan)
+                  : formatPrice(plan.price)}
               </h2>
+
               <p className="text-sm font-medium text-darkgrey mb-6">
                 {plan.user}
               </p>

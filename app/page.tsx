@@ -13,6 +13,7 @@ import Articles from "./components/Articles/index";
 import Joinus from "./components/Joinus/index";
 import Insta from "./components/Insta/index";
 import Show from "./components/Showcase/index";
+import UniconTechChatbot from "./components/Chatbot";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <Articles />
       <Joinus />
       <Insta />
+      <UniconTechChatbot />
     </div>
   );
 }
