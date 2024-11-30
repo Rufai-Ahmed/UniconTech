@@ -34,7 +34,7 @@ const plans = [
   {
     heading: "Website Creation",
     basePrice: 250000,
-    complexityPricing: { basic: 250000, standard: 500000, premium: 1000000 },
+    complexityPricing: { basic: 250000, standard: 1000000, premium: 2500000 },
     user: "one-time fee",
     button: "Get Started Now",
     features: [
@@ -238,21 +238,29 @@ const Manage = () => {
           Manage Your Digital Solutions <br /> All in One Place.
         </h3>
 
-        <div className="flex justify-center mt-8">
-          <label className="mr-3 font-semibold text-lg">Complexity:</label>
-          <select
-            value={selectedComplexity}
-            onChange={(e) =>
-              setSelectedComplexity(
-                e.target.value as "basic" | "standard" | "premium"
-              )
-            }
-            className="border border-gray-300 rounded-md px-3 py-1"
-          >
-            <option value="basic">Basic</option>
-            <option value="standard">Standard</option>
-            <option value="premium">Premium</option>
-          </select>
+        <div className="flex flex-col items-center mt-8">
+          <div className="flex items-center mb-2">
+            <label className="mr-3 font-extrabold text-2xl md:text-xl text-center">
+              Complexity:
+            </label>
+            <select
+              value={selectedComplexity}
+              onChange={(e) =>
+                setSelectedComplexity(
+                  e.target.value as "basic" | "standard" | "premium"
+                )
+              }
+              className="border border-gray-300 rounded-md px-3 py-1 font-bold text-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="basic">Basic</option>
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+            </select>
+          </div>
+          <p className="text-base md:text-lg text-center font-extrabold text-gray-800">
+            If your work requires higher complexity, please select
+            &ldquo;Premium&ldquo; or contact us for a customized solution.
+          </p>
         </div>
 
         <div className="md:flex md:justify-around mt-20">
