@@ -26,7 +26,7 @@ const Contactusform: React.FC<ContactusformProps> = ({
     const { input1, input2, input3 } = inputValues;
 
     // Format the message for WhatsApp
-    const message = `Hello, I am ${input1}.%0AEmail: ${input2}%0A%0AMessage: ${input3}`;
+    const message = `Hello, I am ${input1}.%0AEmail: ${input2}.%0A%0AMessage: ${input3}`;
 
     // Replace the placeholder number with your WhatsApp number
     const whatsappURL = `https://wa.me/2349110212491?text=${message}`;
