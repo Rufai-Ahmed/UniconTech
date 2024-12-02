@@ -3,8 +3,8 @@ import { Fragment, useState } from "react";
 import Link from "next/link";
 
 interface ContactusformProps {
-  isOpen: boolean;
-  closeModal: () => void;
+  isOpen: boolean; // Indicates whether the modal is open
+  closeModal: () => void; // Function to close the modal
 }
 
 const Contactusform: React.FC<ContactusformProps> = ({
@@ -23,9 +23,17 @@ const Contactusform: React.FC<ContactusformProps> = ({
   };
 
   const handleClick = () => {
-    alert(
-      `Name: ${inputValues.input1}, Email-address: ${inputValues.input2}, Message: ${inputValues.input3}`
-    );
+    const { input1, input2, input3 } = inputValues;
+
+    // Format the message for WhatsApp
+    const message = `Hello, I am ${input1}.%0AEmail: ${input2}%0A%0AMessage: ${input3}`;
+
+    // Replace the placeholder number with your WhatsApp number
+    const whatsappURL = `https://wa.me/2349110212491?text=${message}`;
+
+    // Open the WhatsApp URL in a new tab
+    window.open(whatsappURL, "_blank");
+
     closeModal();
   };
 
@@ -142,5 +150,4 @@ const Contactusform: React.FC<ContactusformProps> = ({
     </Transition>
   );
 };
-
 export default Contactusform;
