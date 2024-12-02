@@ -50,7 +50,7 @@ const footer = () => {
                 </Link>
               </div>
               <div className="footer-icons">
-                <Link href="https://www.instagram.com/unicon_tech/">
+                <Link href="https://www.instagram.com/unicontech01/">
                   <Image
                     src={"/images/footer/instagram.svg"}
                     alt="instagram"

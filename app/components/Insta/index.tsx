@@ -13,7 +13,10 @@ const Insta = () => {
             alt="instaOne"
             className="rounded-lg"
           />
-          <Link href={"https://www.instagram.com/unicon_tech/"} target="_blank">
+          <Link
+            href={"https://www.instagram.com/unicontech01/"}
+            target="_blank"
+          >
             <button
               className="hidden text-white font-semibold absolute z-10"
               style={{
@@ -39,7 +42,10 @@ const Insta = () => {
             alt="instaTwo"
             className="rounded-lg"
           />
-          <Link href={"https://www.instagram.com/unicon_tech/"} target="_blank">
+          <Link
+            href={"https://www.instagram.com/unicontech01/"}
+            target="_blank"
+          >
             <button
               className="hidden text-white font-semibold absolute z-10"
               style={{
@@ -65,7 +71,10 @@ const Insta = () => {
             alt="instaThree"
             className="rounded-lg"
           />
-          <Link href={"https://www.instagram.com/unicon_tech/"} target="_blank">
+          <Link
+            href={"https://www.instagram.com/unicontech01/"}
+            target="_blank"
+          >
             <button
               className="hidden text-white font-semibold absolute z-10"
               style={{
@@ -91,7 +100,10 @@ const Insta = () => {
             alt="instaFour"
             className="rounded-lg"
           />
-          <Link href={"https://www.instagram.com/unicon_tech/"} target="_blank">
+          <Link
+            href={"https://www.instagram.com/unicontech01/"}
+            target="_blank"
+          >
             <button
               className="hidden text-white font-semibold absolute z-10"
               style={{
