@@ -63,8 +63,8 @@ const plans = [
   },
   {
     heading: "UI/UX Design",
-    basePrice: 199000,
-    complexityPricing: { basic: 199000, standard: 350000, premium: 500000 },
+    basePrice: 200000,
+    complexityPricing: { basic: 200000, standard: 350000, premium: 500000 },
     user: "per project",
     button: "Get Your Design",
     features: [
@@ -85,7 +85,6 @@ const plans = [
       "Full Website Development",
       "Mobile App Development",
       "Branding & Logo Design",
-      "Market Research & Strategy",
       "6 Months Post-Launch Support",
     ],
     category: "Build/Desing",
@@ -238,7 +237,7 @@ const Manage = () => {
           Manage Your Digital Solutions <br /> All in One Place.
         </h3>
 
-        <div className="flex flex-col items-center mt-8">
+        {/* <div className="flex flex-col items-center mt-8">
           <div className="flex items-center mb-2">
             <label className="mr-3 font-extrabold text-2xl md:text-xl text-center">
               Complexity:
@@ -261,7 +260,7 @@ const Manage = () => {
             If your work requires higher complexity, please select
             &ldquo;Premium&ldquo; or contact us for a customized solution.
           </p>
-        </div>
+        </div> */}
 
         <div className="md:flex md:justify-around mt-20">
           <div className="flex gap-5 justify-center md:justify-start">
@@ -303,7 +302,7 @@ const Manage = () => {
             className="toggleImage"
           />
           <div className="flex justify-center">
-            <h3 className="text-sm font-medium mr-5">
+            <h3 className="text-base font-extrabold mr-5">
               Software Development-UI/UX
             </h3>
             <Switch
@@ -311,7 +310,7 @@ const Manage = () => {
               onChange={toggleEnabled}
               className={`${
                 enabled ? "bg-darkpurple" : "bg-darkpurple"
-              } relative inline-flex h-6 w-11 items-center rounded-full`}
+              } relative inline-flex h-8 w-11 items-center rounded-full`}
             >
               <span className="sr-only text-black">Enable subscription</span>
               <span
@@ -320,7 +319,7 @@ const Manage = () => {
                 } inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            <h3 className="text-sm font-medium ml-5">Training</h3>
+            <h3 className="text-base font-extrabold ml-5">Training</h3>
           </div>
         </div>
 
