@@ -28,6 +28,75 @@ const qaPairs: QA[] = [
       "UniconTech offers cutting-edge services including website development, mobile app creation, software maintenance, project editing, and technical training. Our expertise spans across various technologies to deliver top-notch digital solutions.",
   },
   {
+    question:
+      "What’s the difference between Cybersecurity and Ethical Hacking courses?",
+    answer:
+      "The Cybersecurity course focuses on general network security, incident response, and protection techniques, while the Ethical Hacking course specializes in identifying vulnerabilities and securing systems using real-world hacking scenarios.",
+  },
+  {
+    question:
+      "Do I need prior coding experience for the Artificial Intelligence course?",
+    answer:
+      "While basic programming knowledge is helpful, it's not mandatory. Our class is designed to accommodate beginners, and we provide foundational coding lessons to help you get started with tools like TensorFlow and PyTorch.",
+  },
+
+  {
+    question: "What does the Start-up Package include?",
+    answer:
+      "The Start-up Package includes full website development, mobile app creation, branding and logo design, and 6 months of post-launch support for a seamless business start-up experience.",
+  },
+  {
+    question: "How long does the UI/UX Design training take?",
+    answer:
+      "The UI/UX Design training takes 2 months to complete. It covers user research, wireframing, prototyping, and mastering design tools like Figma and Adobe XD.",
+  },
+  {
+    question:
+      "Can I enroll in both Frontend and Backend Web Development courses?",
+    answer:
+      "Yes, you can enroll in both Frontend and Backend Web Development courses. Alternatively, you can opt for the Full Stack Web Development course, which combines both frontend and backend training.",
+  },
+  {
+    question: "What is covered in Mobile App Development training?",
+    answer:
+      "The Mobile App Development training covers both frontend and backend technologies. You can choose to specialize in frontend (React Native) or backend (server-side programming, databases), or take the Full Stack course for end-to-end development.",
+  },
+  {
+    question: "How is the Website Maintenance service charged?",
+    answer:
+      "The Website Maintenance service is charged at ₦99,000 per month. It includes regular updates, security monitoring, backups, content updates, and 24/7 support.",
+  },
+  {
+    question: "What does the Web Development - Full Stack training include?",
+    answer:
+      "The Full Stack training combines frontend and backend development, full stack project execution, DevOps basics, deployment strategies, and 24/7 support to prepare you for end-to-end web development.",
+  },
+  {
+    question: "Is support available during training and after projects?",
+    answer:
+      "Yes, all our training programs and project services include 24/7 expert support to ensure you have assistance whenever needed.",
+  },
+  {
+    question: "How are complexity levels determined in services?",
+    answer:
+      "Complexity levels are determined by the features, customization, and scope of the project. Basic is for foundational setups, standard includes additional functionalities, and premium provides advanced options tailored to specific needs.",
+  },
+  {
+    question: "Can I upgrade my service or training plan later?",
+    answer:
+      "Yes, you can upgrade your service or training plan at any time by contacting our support team. We'll guide you through the process based on your needs.",
+  },
+  {
+    question: "How can I enroll in a course or start a project?",
+    answer:
+      "To enroll in a course or start a project, simply click the 'Enroll Now' or 'Start My Project' button on the desired service page and follow the instructions. Our team will get in touch with you shortly after.",
+  },
+  {
+    question: "What kind of projects can I expect during training?",
+    answer:
+      "During training, you'll work on hands-on projects that mirror real-world scenarios, such as building responsive websites, securing networks, developing AI models, or creating mobile apps, depending on the course.",
+  },
+  {
     question: "How long does it take to develop a website?",
     answer:
       "The timeline for website development varies based on complexity. A simple website might take 4-6 weeks, while more intricate projects can extend to 3-6 months. We provide detailed, personalized timelines during our initial consultation to ensure transparency and efficient project management.",
@@ -101,8 +170,9 @@ const qaPairs: QA[] = [
   {
     question: "What types of training do you offer?",
     answer:
-      "We offer a variety of training programs, including developer training, UI/UX design workshops, and software management courses. Our training sessions can be customized for your team's specific needs, ensuring they are equipped with the knowledge and skills to succeed.",
+      "We provide comprehensive training programs in web development (frontend, backend, and full stack), mobile app development, UI/UX design, cybersecurity, ethical hacking, and artificial intelligence. Each program is designed to equip you with practical skills and real-world expertise.",
   },
+
   {
     question: "Can I receive training on maintaining my website or mobile app?",
     answer:

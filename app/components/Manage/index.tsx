@@ -120,7 +120,7 @@ const plans = [
   {
     heading: "Web Development - Frontend",
     price: 120000,
-    user: "per course",
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "HTML, CSS, JavaScript",
@@ -134,7 +134,7 @@ const plans = [
   {
     heading: "Web Development - Backend",
     price: 120000,
-    user: "per course",
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "Node.js",
@@ -148,7 +148,7 @@ const plans = [
   {
     heading: "Web Development - Full Stack",
     price: 240000,
-    user: "per course",
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "Frontend & Backend Technologies",
@@ -162,7 +162,7 @@ const plans = [
   {
     heading: "Cybersecurity",
     price: 299999,
-    user: "per course",
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "Comprehensive Cybersecurity Training",
@@ -173,9 +173,23 @@ const plans = [
     category: "Training",
   },
   {
-    heading: "Artificial Intelligence",
+    heading: "Ethical Hacking",
     price: 299999,
-    user: "per course",
+    user: "3 Months",
+    button: "Enroll Now",
+    features: [
+      "Introduction to Hacking Techniques",
+      "Hands-on Practice with Real-world Scenarios",
+      "Understanding Vulnerabilities and Exploits",
+      "Tools and Methods for Ethical Hacking",
+      "24/7 Expert Support",
+    ],
+    category: "Training",
+  },
+  {
+    heading: "Artificial Intelligence",
+    price: 350000,
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "Fundamentals of Artificial Intelligence",
@@ -189,8 +203,8 @@ const plans = [
 
   {
     heading: "Mobile App Development - Frontend",
-    price: 220000,
-    user: "per course",
+    price: 200000,
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "React Native",
@@ -203,8 +217,8 @@ const plans = [
   },
   {
     heading: "Mobile App Development - Backend",
-    price: 220000,
-    user: "per course",
+    price: 200000,
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "Server-side Programming",
@@ -217,8 +231,8 @@ const plans = [
   },
   {
     heading: "Mobile App Development - Full Stack",
-    price: 440000,
-    user: "per course",
+    price: 400000,
+    user: "3 Months",
     button: "Enroll Now",
     features: [
       "End-to-end Mobile Development",
@@ -232,7 +246,7 @@ const plans = [
   {
     heading: "UI/UX Design",
     price: 100000,
-    user: "per course",
+    user: "2 Months",
     button: "Enroll Now",
     features: [
       "Fundamentals of User Interface Design",
