@@ -2,6 +2,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { usePaystackPayment } from "react-paystack";
+import dynamic from "next/dynamic";
 
 interface DonateModalProps {
   isOpen: boolean;
@@ -129,4 +130,4 @@ const DonateModal: React.FC<DonateModalProps> = ({ isOpen, closeModal }) => {
   );
 };
 
-export { DonateModal };
+export default DonateModal;
