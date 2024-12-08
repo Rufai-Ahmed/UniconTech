@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import {
-  FaRobot,
-  FaUser,
-  FaPaperPlane,
-  FaTimes,
-  FaComments,
-} from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import Confetti from "react-confetti";
+import {
+  FaComments,
+  FaPaperPlane,
+  FaRobot,
+  FaTimes,
+  FaUser,
+} from "react-icons/fa";
 
 type Message = {
   text: string;

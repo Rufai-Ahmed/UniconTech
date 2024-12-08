@@ -6,6 +6,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 import Contactusform from "./Contactus";
+import { DonateModal } from "./donate-modal";
 
 interface NavigationItem {
   name: string;
@@ -28,6 +29,7 @@ function classNames(...classes: string[]) {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
 
   return (
     <Disclosure as="nav" className="navbar z-50">
@@ -68,10 +70,18 @@ const Navbar = () => {
 
               {/* CONTACT US BUTTON */}
               <button
-                className="hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white"
+                className="hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-8 navbutton rounded-full hover:bg-navyblue hover:text-white mr-2"
                 onClick={() => setIsContactFormOpen(true)}
               >
                 Contact us
+              </button>
+
+              {/* DONATE BUTTON */}
+              <button
+                className="hidden lg:flex justify-end text-xl font-semibold bg-green-500 text-black border py-4 px-6 lg:px-8 rounded-full hover:bg-green-600 transition duration-300"
+                onClick={() => setIsDonateModalOpen(true)}
+              >
+                Donate
               </button>
 
               {/* CONTACT US FORM */}
@@ -79,6 +89,14 @@ const Navbar = () => {
                 <Contactusform
                   isOpen={isContactFormOpen}
                   closeModal={() => setIsContactFormOpen(false)}
+                />
+              )}
+
+              {/* DONATE MODAL */}
+              {isDonateModalOpen && (
+                <DonateModal
+                  isOpen={isDonateModalOpen}
+                  closeModal={() => setIsDonateModalOpen(false)}
                 />
               )}
             </div>
