@@ -16,7 +16,7 @@ const Dedicated = () => {
           {/* COLUMN-1 */}
           <div>
             <Image
-              src="/images/dedicated/ekenepic.webp"
+              src="/images/dedicated/ekenemain.jpg"
               alt="man-icon"
               width={416}
               height={530}
