@@ -20,7 +20,7 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <Banner />
       <Aboutus />
-      <Dedicated />
+      {/* <Dedicated /> */}
       <Digital />
       <Beliefs />
       {/* <Wework /> */}
