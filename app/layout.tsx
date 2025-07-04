@@ -38,7 +38,7 @@ export default function RootLayout({
         />
 <script src="https://app.tinyadz.com/scripts/v1.0/ads.js" site-id="6867bb8f9b102b1575d383d5" async></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3098710323291507"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
         <meta property="og:title" content="Unicon Tech" />
         <meta
           property="og:description"
