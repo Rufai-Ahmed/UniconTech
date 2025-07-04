@@ -2,13 +2,29 @@ import "./globals.css";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
 import { Metadata } from "next";
-import Head from "next/head";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Unicon Tech | Your Source for Tech Solutions",
   description:
     "Explore cutting-edge tech solutions at Unicon Tech, specializing in innovation and performance.",
-  keywords: ["Unicon Tech", "Unicon", "Tech", 'Build website', 'Unicon website'],
+  keywords: ["Unicon Tech", "Unicon", "Tech", "Build website", "Unicon website"],
+  openGraph: {
+    title: "Unicon Tech",
+    description: "Your source for tech solutions.",
+    url: "https://unicon-tech.vercel.app/",
+    images: [
+      {
+        url: "https://unicon-tech.vercel.app/og-image.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  alternates: {
+    canonical: "https://unicon-tech.vercel.app/",
+  },
 };
 
 export default function RootLayout({
@@ -18,9 +34,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="canonical" href="https://unicon-tech.vercel.app/" />
-        <script
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+        {/* JSON-LD Structured Data */}
+        <Script
+          id="schema-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -36,25 +56,19 @@ export default function RootLayout({
             }),
           }}
         />
-<script src="https://app.tinyadz.com/scripts/v1.0/ads.js" site-id="6867bb8f9b102b1575d383d5" async></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3098710323291507"
-     crossOrigin="anonymous"></script>
-        <meta property="og:title" content="Unicon Tech" />
-        <meta
-          property="og:description"
-          content="Your source for tech solutions."
+        {/* TinyAdz Script */}
+        <Script
+          src="https://app.tinyadz.com/scripts/v1.0/ads.js"
+          strategy="afterInteractive"
+          async
+          data-site-id="6867bb8f9b102b1575d383d5"
         />
-        <meta property="og:url" content="https://unicon-tech.vercel.app/" />
-        <meta
-          property="og:image"
-          content="https://unicon-tech.vercel.app/og-image.png"
+        {/* Google AdSense Script */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3098710323291507"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
         />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
       </body>
     </html>
   );
