@@ -61,7 +61,7 @@ export default function RootLayout({
           src="https://app.tinyadz.com/scripts/v1.0/ads.js"
           strategy="afterInteractive"
           async
-          data-site-id="6867bb8f9b102b1575d383d5"
+          site-id="6867bb8f9b102b1575d383d5"
         />
         {/* Google AdSense Script */}
         <Script
